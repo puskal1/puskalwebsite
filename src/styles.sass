@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+
+body
+.loader-wrapper
+  display: flex
+  position: relative
+  align-self: center
+  height: 70px
+  justify-content: center
+  margin: 0 auto
+  top: 28%
+  width: 78px
+  height: 100vh
+.aligner
+  align-items: center
+.loader1,.loader2,.loader3
+  display: inline-block
+  width: 50px
+  height: 50px
+  border-radius: 50px
+  position: absolute
+  top: 0
+  left: 0
+  border: 5px solid transparent
+  &:after,&:before
+    content: ''
+    position: absolute
+    display: inline-block
+    height: 5px
+    width: 5px
+    top: 0px
+    opacity: 0.2
+    background: gray
+    transform: rotate(0deg)
+    animation: rotatea2 1s linear infinite
+  &:before
+    right: 100px
+    top: 100px
+
+.loader1
+  top: 10px
+  left: 10px
+  border-color: blue
+  border-top-color: transparent
+  transform: rotate(90deg)
+  animation: rotatea 2s linear infinite
+ 
+.loader2
+  top: 5px
+  left: 5px
+  width: 60px
+  height: 60px
+  border-color: #5757f7
+  border-top-color: transparent
+  transform: rotate(0deg)
+  animation: rotatea1 2s linear infinite 
+.loader3
+  width: 70px
+  height: 70px
+  border-top-color: #a3a3f7
+  transform: rotate(90deg)
+  animation: rotatea 2s linear infinite 
+ 
+@keyframes rotatea
+  0%
+    transform: rotate(90deg)
+  100%
+    transform: rotate(450deg)
+
+@keyframes rotatea1
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(-360deg)
+  
+@keyframes rotatea2
+  0%
+    transform: translate(0) rotate(0deg) 
+  50%
+    transform: translate(-1000%) rotate(180deg)
+  100%
+    transform: translate(0%) rotate(360deg)
+
+  
